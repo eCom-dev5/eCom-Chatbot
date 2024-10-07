@@ -7,4 +7,10 @@ langchain_core
 langchain_groq
 langchain_huggingface
 datasets
--e .
+google-cloud-bigquery
+google-api-python-client 
+google-auth-httplib2 
+google-auth-oauthlib
+db-dtypes
+faiss-cpu
+streamlit
