@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #E2EFDE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.logo img {
+    height: 50px; /* Adjust logo size */
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1em;
+}
+
+.cart-button, .profile-button, .logo-button {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    background-color: #E2EFDE;
+    border-radius: 1em;
+    transition: background-color 0.3s;
+}
+
+.cart-button:hover, .profile-button:hover {
+    background-color: #808F87;
+}
+
+/* Dropdown styles */
+.cart-dropdown, .profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 250px;
+    max-height: 300px; /* Limit height for scrollable area */
+    overflow-y: auto; /* Enable scrolling */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.dropdown-content p {
+    margin: 0.5em 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown-content a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+
+/* Show the dropdown when "show" class is added */
+.show {
+    display: block;
+}
+
+/* Product List Styles */
+.product-list {
+    list-style: none;
+    padding: 0;
+}
+
+.product-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    margin: 0 0.5em;
+}
+
+/* Search Box */
+.box {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-box {
+    background-color: #AFD0BF;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%; /* Default width is 70% */
+    max-width: 600px; /* Max width for larger screens */
+    min-width: 300px; /* Min width for smaller screens */
+}
+
+
+
+.search-button {
+    text-decoration: none;
+    color: black;
+    border-width: 0;
+    border-radius: 1em;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0.1em;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #AFD0BF;
+}
+
+.search-button:hover {
+    background-color: #808F87;
+    transition: 0.5s all ease-in;
+}
+.search-input {
+    padding: 1em;
+    border-radius: 1em;
+    border: none;
+    width: 85%; /* Keep percentage to adapt with the box */
+}
+
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .search-box {
+        width: 80%; /* Reduce width on smaller screens */
+    }
+
+    .search-input {
+        width: 80%; /* Adjust input field size */
+    }
+}
+
+/* Media query for extra small screens */
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo img {
+        height: 40px; /* Adjust logo size for smaller screens */
+    }
+
+    .search-box {
+        flex-direction: column; /* Stack input and button vertically */
+        width: 90%; /* Almost full width on small screens */
+        padding: 1em;
+    }
+
+    .search-input {
+        width: 100%; /* Full width for input */
+        margin-bottom: 0.5em; /* Add spacing between input and button */
+    }
+
+    .search-button {
+        padding: 0.5em 1em; /* Adjust button size */
+        width: 100%; /* Full width for the button */
+    }
+}

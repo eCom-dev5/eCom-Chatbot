@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a class="logo-button" href="#">Ecommerce Chatbot</a>
+        </div>
+        <div class="header-buttons">
+            <div class="cart-dropdown">
+                <a href="#" class="cart-button" id="cartButton">Cart</a>
+                <!-- Cart Dropdown -->
+                <div class="dropdown-content" id="cartDropdownContent">
+                    <ul class="product-list">
+                        <li>
+                            Product 1
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="delete-product">Delete</button>
+                        </li>
+                        <li>
+                            Product 2
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="delete-product">Delete</button>
+                        </li>
+                        <li>
+                            Product 3
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="delete-product">Delete</button>
+                        </li>
+                        <li>
+                            Product 4
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="delete-product">Delete</button>
+                        </li>
+                        <li>
+                            Product 5
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="delete-product">Delete</button>
+                        </li>
+                        <li>
+                            Product 6
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="delete-product">Delete</button>
+                        </li>
+                        <li>
+                            Product 7
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="delete-product">Delete</button>
+                        </li>
+                        <li>
+                            Product 8
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="delete-product">Delete</button>
+                        </li>
+                        <li>
+                            Product 9
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="delete-product">Delete</button>
+                        </li>
+                        <li>
+                            Product 10
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity">1</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="delete-product">Delete</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile-dropdown">
+                <a href="#" class="profile-button" id="profileButton">Profile</a>
+                <!-- Profile Dropdown -->
+                <div class="dropdown-content" id="dropdownContent">
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Email:</strong> johndoe@example.com</p>
+                    <a href="#" class="edit-profile">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="box">
+        <div class="search-box">
+            <input type="text" class="search-input" id="searchInput" placeholder="Enter the product name....">
+            <a href="#" class="search-button" id="searchButton">Search</a>
+        </div>
+    </div>
+
+    <script>
+        // Toggle profile dropdown visibility
+        const profileButton = document.getElementById('profileButton');
+        const dropdownContent = document.getElementById('dropdownContent');
+        const cartDropdownContent = document.getElementById('cartDropdownContent');
+
+        profileButton.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior
+            dropdownContent.classList.toggle('show');
+            // Close cart dropdown if it's open
+            if (cartDropdownContent.classList.contains('show')) {
+                cartDropdownContent.classList.remove('show');
+            }
+        });
+
+        // Toggle cart dropdown visibility
+        const cartButton = document.getElementById('cartButton');
+
+        cartButton.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior
+            cartDropdownContent.classList.toggle('show');
+            // Close profile dropdown if it's open
+            if (dropdownContent.classList.contains('show')) {
+                dropdownContent.classList.remove('show');
+            }
+        });
+
+        // Close dropdowns if the user clicks outside of them
+        window.onclick = function(event) {
+            if (!event.target.matches('.profile-button') && !event.target.matches('.cart-button')) {
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                }
+                if (cartDropdownContent.classList.contains('show')) {
+                    cartDropdownContent.classList.remove('show');
+                }
+            }
+        };
+
+        // Google Search Functionality
+        const searchButton = document.getElementById('searchButton');
+        const searchInput = document.getElementById('searchInput');
+
+        searchButton.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior
+            const query = searchInput.value.trim();
+            if (query) {
+                const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+                window.open(googleSearchUrl, '_blank'); // Open in a new tab
+            }
+        });
+    </script>
+</body>
+</html>
