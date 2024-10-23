@@ -1,4 +1,7 @@
 .env
-ecom
+.venv
+verta
 artifacts
 big_credentials.json
+ecom
+**/__pycache__/
