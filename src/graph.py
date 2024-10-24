@@ -14,13 +14,13 @@ from langgraph.checkpoint.memory import MemorySaver
 sys.path.append(
     str(
         Path(
-            "src"
+            "ecom-chat"
         ).resolve()
     )
 )
 
 
-def create_graph():
+def create_graph(isMemory=True):
     memory = MemorySaver()
     builder = StateGraph(MultiAgentState)
     builder.add_node("Metadata", agent.metadata_node)
@@ -38,7 +38,7 @@ def create_graph():
     builder.add_edge("generate", "final")
     builder.add_edge("final", END)
 
-    graph = builder.compile(checkpointer=memory)
+    graph = builder.compile(checkpointer=memory) if isMemory else builder.compile()
 
     return graph
 
