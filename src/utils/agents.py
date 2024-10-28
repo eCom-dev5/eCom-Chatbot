@@ -3,11 +3,55 @@ from langchain.schema import Document
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
 from constants import MEMBERS, OPTIONS
-from langchain_community.vectorstores import FAISS
 from utils.state import MultiAgentState, RouteQuery
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.output_parsers import StrOutputParser
+
+
+def supervisor_agent(state: MultiAgentState):
+    question = state["question"]
+    document = state["documents"]
+
+    system_prompt = (
+        '''
+        You are an efficient supervisor responsible for overseeing a conversation between the following agents: {members}. 
+
+        If you got response from the Agent (response given below as "Generated Answer from the Agents:"), respond with 'FINISH' to move on to next step. 
+        
+        Based on the user's request, decide which agent should respond next. Each agent will complete a task and return their result. 
+        
+        There are two agents working alongside you:
+            - Metadata: This agent has all metadata information about that product. 
+            - Review-Vectorstore: This is a FAISS Vectorstore db containing documents related to all the user reviews for that product.
+        
+        If you got unsatisfied response from the Agents (Agent Throwing Errors like: "Metadata: Unable to generate result") ONLY THEN Call an Agent a **MAXIMUM of TWO TIMES** before responding with 'FINISH'.
+        Once sufficient information is obtained from the Agents, respond with 'FINISH', after which Alpha, the final assistant, will provide the concluding guidance to the user.
+        If the query is generic (Hello, How are you, etc) then route it to Alpha and respond with 'FINISH.' 
+
+        If you got satisfactory response from the Agent (response given above), respond with 'FINISH' to move on to next step. 
+        '''
+    )
+
+    llm = ChatOpenAI(model_name="gpt-4o-mini")
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            ("system", system_prompt),
+            ("human", "{question}"),
+            ('system', "Generated Answer from the Agents: {document}"),
+            (
+                "system",
+                "Given the conversation above, who should act next?"
+                "Or should we FINISH? Select one of: {options}",
+            ),
+        ]
+    ).partial(options=str(OPTIONS), members=", ".join(MEMBERS))
+
+
+    supervisor_chain = prompt | llm.with_structured_output(RouteQuery)
+    
+    update_documents = [m for m in document[-5:]] # Delete the previous documents in the memory to save context
+
+    return {'question_type' : supervisor_chain.invoke({"question": question, 'document': document}), 'question': question, 'documents': update_documents}
 
 
 def metadata_node(state: MultiAgentState):
@@ -84,59 +128,11 @@ def retrieve(state: MultiAgentState):
         state (dict): New key added to state, documents, that contains retrieved documents
     """
     question = state["question"]
-    review_docs = state["review_docs"]
+    retriever = state["retriever"]
 
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-    vectordb = FAISS.from_documents(documents=review_docs, embedding=embeddings)
-    
-    retriever = vectordb.as_retriever()
     # Retrieval
     documents = retriever.invoke(question)
 
     return {"documents": documents, "question": question}
 
 
-def supervisor_agent(state: MultiAgentState):
-    question = state["question"]
-    document = state["documents"]
-
-    system_prompt = (
-        '''
-        You are an efficient supervisor responsible for overseeing a conversation between the following agents: {members}. 
-
-        If you got response from the Agent (response given below as "Generated Answer from the Agents:"), respond with 'FINISH' to move on to next step. 
-        
-        Based on the user's request, decide which agent should respond next. Each agent will complete a task and return their result. 
-        
-        There are two agents working alongside you:
-            - Metadata: This agent has all metadata information about that product. 
-            - Review-Vectorstore: This is a FAISS Vectorstore db containing documents related to all the user reviews for that product.
-        
-        If you got unsatisfied response from the Agents (Agent Throwing Errors like: "Metadata: Unable to generate result") ONLY THEN Call an Agent a **MAXIMUM of TWO TIMES** before responding with 'FINISH'.
-        Once sufficient information is obtained from the Agents, respond with 'FINISH', after which Alpha, the final assistant, will provide the concluding guidance to the user.
-        If the query is generic (Hello, How are you, etc) then route it to Alpha and respond with 'FINISH.' 
-
-        If you got satisfactory response from the Agent (response given above), respond with 'FINISH' to move on to next step. 
-        '''
-    )
-
-    llm = ChatOpenAI(model_name="gpt-4o-mini")
-    prompt = ChatPromptTemplate.from_messages(
-        [
-            ("system", system_prompt),
-            ("human", "{question}"),
-            ('system', "Generated Answer from the Agents: {document}"),
-            (
-                "system",
-                "Given the conversation above, who should act next?"
-                "Or should we FINISH? Select one of: {options}",
-            ),
-        ]
-    ).partial(options=str(OPTIONS), members=", ".join(MEMBERS))
-
-
-    supervisor_chain = prompt | llm.with_structured_output(RouteQuery)
-    
-    update_documents = [m for m in document[-5:]] # Delete the previous documents in the memory to save context
-
-    return {'question_type' : supervisor_chain.invoke({"question": question, 'document': document}), 'question': question, 'documents': update_documents}

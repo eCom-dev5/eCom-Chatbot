@@ -1,14 +1,26 @@
 import os
 import graph
+import sys
+from pathlib import Path
 import streamlit as st
 from google.cloud import bigquery
 from google.oauth2 import service_account
 from langfuse.callback import CallbackHandler
 from constants import META_TABLE, REVIEW_TABLE
 from langchain.document_loaders import DataFrameLoader
+from langchain_community.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
 
 from dotenv import load_dotenv
 load_dotenv()
+
+sys.path.append(
+    str(
+        Path(
+            "ecom-chat"
+        ).resolve()
+    )
+)
 
 ## load the API Keys
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
@@ -41,10 +53,6 @@ if name:
     rows = query_job.result()  # Waits for query to finish
     review_df = rows.to_dataframe()
 
-    # Load the Reviews
-    loader = DataFrameLoader(review_df) 
-    review_documents = loader.load()
-
     # Perform a metadata query.
     meta_query = (f'''SELECT *
             FROM {META_TABLE} 
@@ -57,6 +65,15 @@ if name:
     review_df.drop(columns=['user_id', 'images'], inplace = True)
     meta_df.drop(columns=['images', 'videos', 'bought_together'], inplace = True)
 
+    # Load the Reviews
+    loader = DataFrameLoader(review_df) 
+    review_docs = loader.load()
+
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    vectordb = FAISS.from_documents(documents=review_docs, embedding=embeddings)
+    
+    retriever = vectordb.as_retriever()
+
     st.write("Fetched Review Data", review_df)
     st.write("Fetched Meta Data", meta_df)
 
@@ -66,9 +83,9 @@ if name:
 
     if user_input:
         response = app.invoke({
-            "question": st.session_state['question'],
+            "question": name,
             "meta_data": meta_df,
-            "review_docs": review_documents,
+            "retriever": retriever,
         }, config=config)
 
         st.write("Verta:", response['answer'].content)

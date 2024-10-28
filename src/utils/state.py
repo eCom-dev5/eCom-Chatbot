@@ -4,6 +4,7 @@ from typing_extensions import TypedDict
 from pydantic import BaseModel
 import pandas as pd
 from constants import OPTIONS
+from langchain_core.vectorstores.base import VectorStoreRetriever
 
 class MultiAgentState(TypedDict):
     question: str
@@ -11,7 +12,7 @@ class MultiAgentState(TypedDict):
     answer: str 
     documents: Annotated[list[str], add]
     meta_data: pd.DataFrame
-    review_docs: list
+    retriever: VectorStoreRetriever
     followup_questions: list[str]
 
 class RouteQuery(BaseModel):
