@@ -19,4 +19,4 @@ CONDITIONAL_MAP["FINISH"] = 'generate'
 # BigQuery Tables
 REVIEW_TABLE = "ecom-chat-437005.ecom_chat.review"
 META_TABLE = "ecom-chat-437005.ecom_chat.meta"
-PARENT_ASIN = '0156031191'
+PARENT_ASIN = 'B072K6TLJX'

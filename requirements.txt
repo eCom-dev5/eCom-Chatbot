@@ -23,6 +23,10 @@ langchain-community==0.3.3
 langgraph==0.2.39
 langchain-huggingface==0.1.0
 langchain-openai==0.2.3
+cloud-sql-python-connector
+pg8000
+sqlalchemy
+
 
 # Development dependencies
 ipykernel

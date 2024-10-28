@@ -1,9 +1,9 @@
+import pandas as pd
 from operator import add
+from constants import OPTIONS
+from pydantic import BaseModel
 from typing import Annotated, Literal
 from typing_extensions import TypedDict
-from pydantic import BaseModel
-import pandas as pd
-from constants import OPTIONS
 from langchain_core.vectorstores.base import VectorStoreRetriever
 
 class MultiAgentState(TypedDict):
@@ -17,5 +17,4 @@ class MultiAgentState(TypedDict):
 
 class RouteQuery(BaseModel):
     """Route a user query to the most relevant datasource."""
-
-    datasource: Literal[*OPTIONS]
+    datasource: Literal[*OPTIONS] # type: ignore

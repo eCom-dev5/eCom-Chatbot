@@ -17,11 +17,12 @@ app = FastAPI()
 class UserInput(BaseModel):
     user_input: str
     config: dict
+    parent_asin: str
     log_langfuse: bool
     stream_tokens: bool
 
 
-@app.post("/invoke")
+@app.post("/dev-invoke")
 async def invoke(user_input: UserInput):
     """
     Invoke the agent with user input to retrieve a final response.
@@ -110,7 +111,7 @@ def _sse_response_example() -> dict[int, Any]:
     }
 
 
-@app.post("/stream", response_class=StreamingResponse, responses=_sse_response_example())
+@app.post("/dev-stream", response_class=StreamingResponse, responses=_sse_response_example())
 async def stream_agent(user_input: UserInput) -> StreamingResponse:
     """
     Stream the agent's response to a user input, including intermediate messages and tokens.
