@@ -1,6 +1,7 @@
 import os
 import sys
 import graph
+import asyncio
 import pandas as pd
 import streamlit as st
 from pathlib import Path
@@ -46,6 +47,10 @@ credentials = {
 st.set_page_config(page_title="Verta", page_icon="🧑‍💻")
 st.title("Verta")
 st.subheader("Your Intelligent eCommerce Companion")
+
+### Initialize session state for storing conversation history
+if "messages" not in st.session_state:
+    st.session_state["messages"] = []
 
 ## Create Postgres Engine
 engine = db.connect_with_db(credentials)
@@ -100,16 +105,45 @@ if asin:
         # User question input field
         user_input = st.text_input("Your question:", key="user_question")
 
-        if user_input:
-            response = app.invoke({
-                "question": asin,
-                "meta_data": meta_df,
-                "retriever": retriever,
-            }, config=config)
+        async def handle_user_input(user_input):
+            # Append user question to messages history
+            st.session_state["messages"].append({"role": "user", "content": user_input})
+            st.session_state["messages"].append({"role": "assistant", "content": ""})  # Placeholder for streaming response
 
-            st.write("Verta:", response['aanswer'].content)
-        
-                
+            # Display full conversation history including streaming content
+            messages_container = st.empty()
+            
+            async def update_message_stream():
+                # Render each message in the session state
+                with messages_container.container():
+                    for message in st.session_state["messages"]:
+                        if message["role"] == "user":
+                            st.write(f"**You:** {message['content']}")
+                        else:
+                            st.write(f"**Verta:** {message['content']}")
+
+            # Async stream events
+            async for event in app.astream_events(
+                {"question": user_input, "meta_data": meta_df, "retriever": retriever}, version="v2", config=config
+            ):
+                if not event:
+                    continue
+
+                # Handle streamed tokens
+                if (
+                    event["event"] == "on_chat_model_stream"
+                    and any(tag.startswith('seq:step:2') for tag in event.get("tags", []))
+                    and event['metadata']['langgraph_node'] == 'generate'
+                ):
+                    content = event["data"]["chunk"].content
+                    if content:
+                        # Update only the last assistant message in session state
+                        st.session_state["messages"][-1]["content"] += content
+                        await update_message_stream()  # Refresh messages display
+
+        # Handle input asynchronously
+        if user_input:
+            asyncio.run(handle_user_input(user_input))
                 
 
 
