@@ -26,6 +26,7 @@ langchain-openai==0.2.3
 cloud-sql-python-connector
 pg8000
 sqlalchemy
+redis
 
 
 # Development dependencies
