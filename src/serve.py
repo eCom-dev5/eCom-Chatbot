@@ -14,7 +14,8 @@ from langfuse.callback import CallbackHandler
 from langchain_community.vectorstores import FAISS
 from langgraph.graph.state import CompiledStateGraph
 from langchain_huggingface import HuggingFaceEmbeddings
-from fastapi import FastAPI, Request, HTTPException, status
+from fastapi import FastAPI, Request, HTTPException, status, Query  # Add the import for Query
+
 from fastapi.responses import StreamingResponse, JSONResponse
 from langchain_community.document_loaders import DataFrameLoader
 import logging
@@ -111,17 +112,32 @@ async def get_retriever_for_asin(asin: str):
 #         return JSONResponse(content={"status": "failed to initialize retriever"}, status_code=500)
 #     return JSONResponse(content={"status": "retriever initialized", "asin": asin}, status_code=200)
 
+# @app.get("/initialize")
+# async def initialize(asin: str):
+#     logger.info(f"Received request to initialize retriever for ASIN: {asin}")
+
+#     # Uncomment and add your retriever initialization logic if needed
+#     # retriever, meta_df = await get_retriever_for_asin(asin)
+#     # if retriever is None:
+#     #     logger.error(f"Failed to initialize retriever for ASIN: {asin}")
+#     #     return JSONResponse(content={"status": "failed to initialize retriever"}, status_code=500)
+
+#     logger.info(f"Retriever initialized successfully for ASIN: {asin}")
+#     return JSONResponse(content={"status": "retriever initialized", "asin": asin}, status_code=200)
+
+
 @app.get("/initialize")
-async def initialize(asin: str):
-    logger.info(f"Received request to initialize retriever for ASIN: {asin}")
-    
-    #retriever, meta_df = await get_retriever_for_asin(asin)
+async def initialize(asin: str = Query(...), user_id: int = Query(...)):
+    logger.info(f"Received request to initialize retriever for ASIN: {asin} and User ID: {user_id}")
+
+    # Uncomment and add your retriever initialization logic if needed
+    # retriever, meta_df = await get_retriever_for_asin(asin)
     # if retriever is None:
     #     logger.error(f"Failed to initialize retriever for ASIN: {asin}")
     #     return JSONResponse(content={"status": "failed to initialize retriever"}, status_code=500)
-    
-    logger.info(f"Retriever initialized successfully for ASIN: {asin}")
-    return JSONResponse(content={"status": "retriever initialized", "asin": asin}, status_code=200)
+
+    logger.info(f"Retriever initialized successfully for ASIN: {asin} and User ID: {user_id}")
+    return JSONResponse(content={"status": "retriever initialized", "asin": asin, "user_id": user_id}, status_code=200)
 
 
 class UserInput(BaseModel):
