@@ -17,6 +17,11 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from fastapi import FastAPI, Request, HTTPException, status
 from fastapi.responses import StreamingResponse, JSONResponse
 from langchain_community.document_loaders import DataFrameLoader
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -98,12 +103,24 @@ async def get_retriever_for_asin(asin: str):
         redis_client.set(f"meta_df:{asin}", meta_df)
     return retriever, meta_df
 
+#old app get request
+# @app.get("/initialize")
+# async def initialize(asin: str):
+#     retriever, meta_df = await get_retriever_for_asin(asin)
+#     if retriever is None:
+#         return JSONResponse(content={"status": "failed to initialize retriever"}, status_code=500)
+#     return JSONResponse(content={"status": "retriever initialized", "asin": asin}, status_code=200)
 
 @app.get("/initialize")
 async def initialize(asin: str):
-    retriever, meta_df = await get_retriever_for_asin(asin)
-    if retriever is None:
-        return JSONResponse(content={"status": "failed to initialize retriever"}, status_code=500)
+    logger.info(f"Received request to initialize retriever for ASIN: {asin}")
+    
+    #retriever, meta_df = await get_retriever_for_asin(asin)
+    # if retriever is None:
+    #     logger.error(f"Failed to initialize retriever for ASIN: {asin}")
+    #     return JSONResponse(content={"status": "failed to initialize retriever"}, status_code=500)
+    
+    logger.info(f"Retriever initialized successfully for ASIN: {asin}")
     return JSONResponse(content={"status": "retriever initialized", "asin": asin}, status_code=200)
 
 
