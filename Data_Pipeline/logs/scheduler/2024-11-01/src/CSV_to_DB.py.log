@@ -1,0 +1,500 @@
+[2024-11-01T18:29:05.751+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:29:05.752+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:29:05.755+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:29:05.754+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:29:06.081+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:29:06.097+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.350 seconds
+[2024-11-01T18:29:36.587+0000] {processor.py:186} INFO - Started process (PID=54) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:29:36.589+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:29:36.591+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:29:36.591+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:29:36.746+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:29:36.752+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.172 seconds
+[2024-11-01T18:30:06.885+0000] {processor.py:186} INFO - Started process (PID=70) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:30:06.886+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:30:06.889+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:30:06.889+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:30:07.137+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:30:07.142+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.262 seconds
+[2024-11-01T18:30:37.373+0000] {processor.py:186} INFO - Started process (PID=80) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:30:37.374+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:30:37.375+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:30:37.374+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:30:37.545+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:30:37.551+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.181 seconds
+[2024-11-01T18:31:07.704+0000] {processor.py:186} INFO - Started process (PID=90) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:31:07.707+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:31:07.711+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:31:07.710+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:31:07.874+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:31:07.878+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.180 seconds
+[2024-11-01T18:32:02.673+0000] {processor.py:186} INFO - Started process (PID=40) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:32:02.674+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:32:02.677+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:32:02.677+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:32:02.868+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:32:02.875+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.205 seconds
+[2024-11-01T18:32:33.349+0000] {processor.py:186} INFO - Started process (PID=49) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:32:33.350+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:32:33.351+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:32:33.351+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:32:33.510+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:32:33.514+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.167 seconds
+[2024-11-01T18:33:03.858+0000] {processor.py:186} INFO - Started process (PID=59) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:33:03.859+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:33:03.862+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:33:03.861+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:33:04.041+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:33:04.047+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.195 seconds
+[2024-11-01T18:33:34.314+0000] {processor.py:186} INFO - Started process (PID=69) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:33:34.315+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:33:34.320+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:33:34.320+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:33:34.466+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:33:34.472+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.165 seconds
+[2024-11-01T18:34:04.767+0000] {processor.py:186} INFO - Started process (PID=79) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:34:04.767+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:34:04.770+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:34:04.770+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:34:04.912+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:34:04.917+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.156 seconds
+[2024-11-01T18:34:55.667+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:34:55.668+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:34:55.669+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:34:55.669+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:34:55.876+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:34:55.882+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.219 seconds
+[2024-11-01T18:35:26.452+0000] {processor.py:186} INFO - Started process (PID=51) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:35:26.452+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:35:26.454+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:35:26.454+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:35:26.649+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:35:26.654+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.205 seconds
+[2024-11-01T18:35:57.137+0000] {processor.py:186} INFO - Started process (PID=66) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:35:57.138+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:35:57.142+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:35:57.142+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:35:57.313+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:35:57.317+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.188 seconds
+[2024-11-01T18:36:27.529+0000] {processor.py:186} INFO - Started process (PID=76) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:36:27.530+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:36:27.534+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:36:27.534+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:36:27.679+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:36:27.683+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.159 seconds
+[2024-11-01T18:36:57.970+0000] {processor.py:186} INFO - Started process (PID=86) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:36:57.970+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:36:57.973+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:36:57.973+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:36:58.119+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:36:58.125+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.160 seconds
+[2024-11-01T18:37:28.429+0000] {processor.py:186} INFO - Started process (PID=96) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:37:28.430+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T18:37:28.433+0000] {logging_mixin.py:190} INFO - [2024-11-01T18:37:28.433+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:37:28.571+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T18:37:28.577+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.153 seconds
+[2024-11-01T19:15:03.996+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:15:03.997+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:15:04.001+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:15:04.001+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:15:04.290+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:15:04.299+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.308 seconds
+[2024-11-01T19:16:50.457+0000] {processor.py:186} INFO - Started process (PID=40) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:16:50.461+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:16:50.465+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:16:50.464+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:16:50.718+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:16:50.733+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.280 seconds
+[2024-11-01T19:17:21.305+0000] {processor.py:186} INFO - Started process (PID=50) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:17:21.307+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:17:21.308+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:17:21.308+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:17:21.506+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:17:21.513+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.211 seconds
+[2024-11-01T19:17:51.940+0000] {processor.py:186} INFO - Started process (PID=60) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:17:51.941+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:17:51.942+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:17:51.942+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:17:52.099+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:17:52.104+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.169 seconds
+[2024-11-01T19:19:05.826+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:19:05.826+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:19:05.828+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:19:05.828+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:19:06.074+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:19:06.086+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.265 seconds
+[2024-11-01T19:19:36.646+0000] {processor.py:186} INFO - Started process (PID=57) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:19:36.647+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:19:36.649+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:19:36.649+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:19:36.817+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:19:36.822+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.179 seconds
+[2024-11-01T19:20:07.303+0000] {processor.py:186} INFO - Started process (PID=71) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:20:07.304+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:20:07.306+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:20:07.306+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:20:07.486+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:20:07.491+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.194 seconds
+[2024-11-01T19:20:37.995+0000] {processor.py:186} INFO - Started process (PID=81) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:20:37.997+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:20:38.000+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:20:37.999+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:20:38.150+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:20:38.155+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.164 seconds
+[2024-11-01T19:21:08.624+0000] {processor.py:186} INFO - Started process (PID=91) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:21:08.625+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:21:08.628+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:21:08.627+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:21:08.799+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:21:08.805+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.186 seconds
+[2024-11-01T19:21:39.325+0000] {processor.py:186} INFO - Started process (PID=101) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:21:39.326+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:21:39.328+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:21:39.328+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:21:39.500+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:21:39.505+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.186 seconds
+[2024-11-01T19:22:09.997+0000] {processor.py:186} INFO - Started process (PID=117) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:22:09.997+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:22:09.999+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:22:09.999+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:22:10.145+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:22:10.149+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.156 seconds
+[2024-11-01T19:22:40.470+0000] {processor.py:186} INFO - Started process (PID=127) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:22:40.471+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:22:40.473+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:22:40.472+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:22:40.634+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:22:40.639+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.174 seconds
+[2024-11-01T19:23:11.126+0000] {processor.py:186} INFO - Started process (PID=138) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:23:11.130+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:23:11.135+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:23:11.134+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:23:11.347+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:23:11.353+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.237 seconds
+[2024-11-01T19:23:36.870+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:23:36.871+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:23:36.876+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:23:36.876+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:23:37.126+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:23:37.135+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.269 seconds
+[2024-11-01T19:24:07.704+0000] {processor.py:186} INFO - Started process (PID=50) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:24:07.706+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:24:07.706+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:24:07.706+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:24:07.938+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:24:07.946+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.245 seconds
+[2024-11-01T19:24:38.445+0000] {processor.py:186} INFO - Started process (PID=60) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:24:38.446+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:24:38.448+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:24:38.447+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:24:38.593+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:24:38.597+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.156 seconds
+[2024-11-01T19:25:09.081+0000] {processor.py:186} INFO - Started process (PID=70) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:25:09.082+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:25:09.086+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:25:09.085+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:25:09.274+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:25:09.281+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.205 seconds
+[2024-11-01T19:25:39.810+0000] {processor.py:186} INFO - Started process (PID=80) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:25:39.810+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:25:39.812+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:25:39.812+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:25:39.993+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:25:39.998+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.194 seconds
+[2024-11-01T19:26:10.494+0000] {processor.py:186} INFO - Started process (PID=90) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:26:10.494+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:26:10.496+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:26:10.496+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:26:10.680+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:26:10.685+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.196 seconds
+[2024-11-01T19:26:41.228+0000] {processor.py:186} INFO - Started process (PID=107) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:26:41.230+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:26:41.233+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:26:41.233+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:26:41.406+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:26:41.412+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.191 seconds
+[2024-11-01T19:28:58.519+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:28:58.520+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:28:58.522+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:28:58.522+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:28:58.784+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:28:58.796+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.281 seconds
+[2024-11-01T19:29:29.322+0000] {processor.py:186} INFO - Started process (PID=51) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:29:29.322+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:29:29.325+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:29:29.324+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:29:29.510+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:29:29.516+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.198 seconds
+[2024-11-01T19:29:59.968+0000] {processor.py:186} INFO - Started process (PID=61) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:29:59.968+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:29:59.971+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:29:59.971+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:30:00.176+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:30:00.182+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.219 seconds
+[2024-11-01T19:30:30.675+0000] {processor.py:186} INFO - Started process (PID=71) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:30:30.676+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:30:30.682+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:30:30.682+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:30:30.946+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:30:30.959+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.291 seconds
+[2024-11-01T19:31:01.458+0000] {processor.py:186} INFO - Started process (PID=90) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:31:01.459+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:31:01.463+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:31:01.463+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:31:01.746+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:31:01.752+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.301 seconds
+[2024-11-01T19:31:32.260+0000] {processor.py:186} INFO - Started process (PID=100) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:31:32.261+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:31:32.264+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:31:32.263+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:31:32.486+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:31:32.492+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.239 seconds
+[2024-11-01T19:32:02.995+0000] {processor.py:186} INFO - Started process (PID=117) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:32:02.996+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:32:03.000+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:32:02.999+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:32:03.170+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:32:03.178+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.192 seconds
+[2024-11-01T19:32:33.496+0000] {processor.py:186} INFO - Started process (PID=127) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:32:33.497+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:32:33.500+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:32:33.500+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:32:33.651+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:32:33.660+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.171 seconds
+[2024-11-01T19:33:03.993+0000] {processor.py:186} INFO - Started process (PID=137) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:33:03.993+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:33:03.996+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:33:03.996+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:33:04.133+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:33:04.140+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.154 seconds
+[2024-11-01T19:33:55.511+0000] {processor.py:186} INFO - Started process (PID=42) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:33:55.511+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:33:55.513+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:33:55.513+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:33:55.923+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:33:55.930+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.424 seconds
+[2024-11-01T19:34:26.458+0000] {processor.py:186} INFO - Started process (PID=57) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:34:26.459+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:34:26.462+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:34:26.462+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:34:26.673+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:34:26.679+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.228 seconds
+[2024-11-01T19:34:56.926+0000] {processor.py:186} INFO - Started process (PID=73) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:34:56.929+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:34:56.932+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:34:56.932+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:34:57.234+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:34:57.240+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.319 seconds
+[2024-11-01T19:35:27.578+0000] {processor.py:186} INFO - Started process (PID=83) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:35:27.579+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:35:27.581+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:35:27.581+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:35:27.822+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:35:27.827+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.253 seconds
+[2024-11-01T19:35:58.128+0000] {processor.py:186} INFO - Started process (PID=97) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:35:58.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:35:58.139+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:35:58.138+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:35:58.368+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:35:58.373+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.252 seconds
+[2024-11-01T19:36:28.696+0000] {processor.py:186} INFO - Started process (PID=107) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:36:28.697+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:36:28.700+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:36:28.700+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:36:28.918+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:36:28.923+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.231 seconds
+[2024-11-01T19:36:59.242+0000] {processor.py:186} INFO - Started process (PID=123) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:36:59.243+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:36:59.245+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:36:59.245+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:36:59.519+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:36:59.526+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.288 seconds
+[2024-11-01T19:37:29.902+0000] {processor.py:186} INFO - Started process (PID=133) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:37:29.903+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:37:29.906+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:37:29.906+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:37:30.134+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:37:30.159+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.265 seconds
+[2024-11-01T19:38:00.395+0000] {processor.py:186} INFO - Started process (PID=147) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:38:00.396+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:38:00.399+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:38:00.399+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:38:00.626+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:38:00.630+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.242 seconds
+[2024-11-01T19:38:30.931+0000] {processor.py:186} INFO - Started process (PID=157) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:38:30.932+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:38:30.935+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:38:30.935+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:38:31.137+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:38:31.145+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.219 seconds
+[2024-11-01T19:39:01.450+0000] {processor.py:186} INFO - Started process (PID=167) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:39:01.452+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:39:01.456+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:39:01.455+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:39:01.663+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:39:01.668+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.225 seconds
+[2024-11-01T19:39:31.926+0000] {processor.py:186} INFO - Started process (PID=177) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:39:31.928+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:39:31.932+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:39:31.931+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:39:32.167+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:39:32.174+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.257 seconds
+[2024-11-01T19:40:02.501+0000] {processor.py:186} INFO - Started process (PID=187) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:40:02.504+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:40:02.506+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:40:02.506+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:40:02.700+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:40:02.709+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.216 seconds
+[2024-11-01T19:40:33.030+0000] {processor.py:186} INFO - Started process (PID=197) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:40:33.034+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:40:33.038+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:40:33.038+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:40:33.266+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:40:33.273+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.254 seconds
+[2024-11-01T19:41:03.557+0000] {processor.py:186} INFO - Started process (PID=207) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:41:03.559+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:41:03.564+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:41:03.564+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:41:03.779+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:41:03.786+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.239 seconds
+[2024-11-01T19:41:34.111+0000] {processor.py:186} INFO - Started process (PID=217) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:41:34.113+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:41:34.116+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:41:34.116+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:41:34.350+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:41:34.357+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.253 seconds
+[2024-11-01T19:42:04.731+0000] {processor.py:186} INFO - Started process (PID=227) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:42:04.732+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:42:04.736+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:42:04.736+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:42:04.983+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:42:04.987+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.265 seconds
+[2024-11-01T19:42:35.338+0000] {processor.py:186} INFO - Started process (PID=237) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:42:35.339+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:42:35.341+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:42:35.341+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:42:35.500+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:42:35.507+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.175 seconds
+[2024-11-01T19:43:05.864+0000] {processor.py:186} INFO - Started process (PID=247) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:43:05.866+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:43:05.869+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:43:05.868+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:43:06.095+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:43:06.102+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.247 seconds
+[2024-11-01T19:44:01.196+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:44:01.197+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:44:01.198+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:44:01.198+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:44:01.432+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:44:01.442+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.249 seconds
+[2024-11-01T19:44:32.040+0000] {processor.py:186} INFO - Started process (PID=51) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:44:32.040+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:44:32.043+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:44:32.043+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:44:32.290+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:44:32.295+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.261 seconds
+[2024-11-01T19:45:02.783+0000] {processor.py:186} INFO - Started process (PID=61) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:45:02.784+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:45:02.787+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:45:02.786+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:45:03.026+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:45:03.033+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.254 seconds
+[2024-11-01T19:45:33.551+0000] {processor.py:186} INFO - Started process (PID=77) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:45:33.552+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:45:33.558+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:45:33.558+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:45:33.873+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:45:33.882+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.338 seconds
+[2024-11-01T19:46:04.413+0000] {processor.py:186} INFO - Started process (PID=87) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:46:04.414+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:46:04.417+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:46:04.416+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:46:04.632+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:46:04.638+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.230 seconds
+[2024-11-01T19:46:35.179+0000] {processor.py:186} INFO - Started process (PID=103) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:46:35.180+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:46:35.183+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:46:35.183+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:46:35.431+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:46:35.438+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.265 seconds
+[2024-11-01T19:47:26.906+0000] {processor.py:186} INFO - Started process (PID=41) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:47:26.907+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:47:26.909+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:47:26.909+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:47:27.172+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:47:27.182+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.279 seconds
+[2024-11-01T19:47:57.716+0000] {processor.py:186} INFO - Started process (PID=61) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:47:57.717+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:47:57.720+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:47:57.720+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:47:57.961+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:47:57.966+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.253 seconds
+[2024-11-01T19:48:28.512+0000] {processor.py:186} INFO - Started process (PID=71) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:48:28.513+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:48:28.517+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:48:28.517+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:48:28.740+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:48:28.747+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.241 seconds
+[2024-11-01T19:48:59.293+0000] {processor.py:186} INFO - Started process (PID=81) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:48:59.294+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:48:59.297+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:48:59.297+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:48:59.444+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:48:59.449+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.161 seconds
+[2024-11-01T19:49:30.007+0000] {processor.py:186} INFO - Started process (PID=91) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:49:30.008+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:49:30.013+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:49:30.013+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:49:30.307+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:49:30.314+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.315 seconds
+[2024-11-01T19:50:00.849+0000] {processor.py:186} INFO - Started process (PID=101) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:50:00.851+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:50:00.854+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:50:00.854+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:50:01.037+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:50:01.044+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.200 seconds
+[2024-11-01T19:50:31.584+0000] {processor.py:186} INFO - Started process (PID=117) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:50:31.585+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:50:31.589+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:50:31.588+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:50:31.840+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:50:31.848+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.270 seconds
+[2024-11-01T19:51:02.419+0000] {processor.py:186} INFO - Started process (PID=127) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:51:02.420+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:51:02.422+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:51:02.422+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:51:02.600+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:51:02.606+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.194 seconds
+[2024-11-01T19:51:33.102+0000] {processor.py:186} INFO - Started process (PID=137) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:51:33.102+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:51:33.104+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:51:33.104+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:51:33.294+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:51:33.300+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.204 seconds
+[2024-11-01T19:52:03.926+0000] {processor.py:186} INFO - Started process (PID=147) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:52:03.927+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:52:03.928+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:52:03.928+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:52:03.999+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:52:04.005+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.082 seconds
+[2024-11-01T19:52:34.473+0000] {processor.py:186} INFO - Started process (PID=157) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:52:34.474+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:52:34.476+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:52:34.476+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:52:34.565+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:52:34.572+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.105 seconds
+[2024-11-01T19:53:04.964+0000] {processor.py:186} INFO - Started process (PID=167) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:53:04.966+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:53:04.968+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:53:04.968+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:53:05.046+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:53:05.053+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.094 seconds
+[2024-11-01T19:53:35.513+0000] {processor.py:186} INFO - Started process (PID=177) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:53:35.514+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:53:35.517+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:53:35.517+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:53:35.626+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:53:35.635+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.128 seconds
+[2024-11-01T19:54:06.087+0000] {processor.py:186} INFO - Started process (PID=187) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:54:06.088+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:54:06.091+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:54:06.090+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:54:06.222+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:54:06.236+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.156 seconds
+[2024-11-01T19:54:36.644+0000] {processor.py:186} INFO - Started process (PID=196) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:54:36.645+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:54:36.649+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:54:36.649+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:54:36.752+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:54:36.760+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.122 seconds
+[2024-11-01T19:55:07.224+0000] {processor.py:186} INFO - Started process (PID=206) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:55:07.226+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:55:07.236+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:55:07.236+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:55:07.419+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:55:07.455+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.253 seconds
+[2024-11-01T19:55:38.002+0000] {processor.py:186} INFO - Started process (PID=216) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:55:38.005+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:55:38.009+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:55:38.009+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:55:38.105+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:55:38.114+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.119 seconds
+[2024-11-01T19:56:08.528+0000] {processor.py:186} INFO - Started process (PID=226) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:56:08.529+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:56:08.533+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:56:08.533+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:56:08.647+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:56:08.656+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.134 seconds
+[2024-11-01T19:56:39.177+0000] {processor.py:186} INFO - Started process (PID=236) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:56:39.178+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:56:39.182+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:56:39.182+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:56:39.275+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:56:39.282+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.112 seconds
+[2024-11-01T19:57:09.779+0000] {processor.py:186} INFO - Started process (PID=246) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:57:09.780+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:57:09.783+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:57:09.782+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:57:09.860+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:57:09.867+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.093 seconds
+[2024-11-01T19:57:40.268+0000] {processor.py:186} INFO - Started process (PID=256) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:57:40.269+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:57:40.270+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:57:40.270+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:57:40.370+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:57:40.377+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.116 seconds
+[2024-11-01T19:58:10.840+0000] {processor.py:186} INFO - Started process (PID=266) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:58:10.840+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:58:10.842+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:58:10.842+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:58:10.920+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:58:10.927+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.093 seconds
+[2024-11-01T19:58:41.365+0000] {processor.py:186} INFO - Started process (PID=276) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:58:41.367+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:58:41.370+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:58:41.370+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:58:41.482+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:58:41.492+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.133 seconds
+[2024-11-01T19:59:11.926+0000] {processor.py:186} INFO - Started process (PID=286) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:59:11.927+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:59:11.930+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:59:11.929+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:59:12.040+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:59:12.049+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.129 seconds
+[2024-11-01T19:59:42.492+0000] {processor.py:186} INFO - Started process (PID=296) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:59:42.494+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T19:59:42.497+0000] {logging_mixin.py:190} INFO - [2024-11-01T19:59:42.497+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:59:42.581+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T19:59:42.587+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.102 seconds
+[2024-11-01T20:00:13.042+0000] {processor.py:186} INFO - Started process (PID=306) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:00:13.043+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T20:00:13.046+0000] {logging_mixin.py:190} INFO - [2024-11-01T20:00:13.046+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:00:13.141+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:00:13.149+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.114 seconds
+[2024-11-01T20:00:43.568+0000] {processor.py:186} INFO - Started process (PID=316) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:00:43.569+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T20:00:43.571+0000] {logging_mixin.py:190} INFO - [2024-11-01T20:00:43.571+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:00:43.671+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:00:43.679+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.118 seconds
+[2024-11-01T20:01:14.096+0000] {processor.py:186} INFO - Started process (PID=326) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:01:14.097+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T20:01:14.099+0000] {logging_mixin.py:190} INFO - [2024-11-01T20:01:14.099+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:01:14.189+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:01:14.196+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.104 seconds
+[2024-11-01T20:01:44.648+0000] {processor.py:186} INFO - Started process (PID=336) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:01:44.649+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T20:01:44.653+0000] {logging_mixin.py:190} INFO - [2024-11-01T20:01:44.653+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:01:44.736+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:01:44.742+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.100 seconds
+[2024-11-01T20:02:15.249+0000] {processor.py:186} INFO - Started process (PID=346) to work on /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:02:15.250+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/src/CSV_to_DB.py for tasks to queue
+[2024-11-01T20:02:15.251+0000] {logging_mixin.py:190} INFO - [2024-11-01T20:02:15.251+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:02:15.338+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/src/CSV_to_DB.py
+[2024-11-01T20:02:15.344+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/src/CSV_to_DB.py took 0.100 seconds

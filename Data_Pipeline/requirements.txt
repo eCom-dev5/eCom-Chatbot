@@ -1,0 +1,8 @@
+cloud-sql-python-connector
+pg8000
+SQLAlchemy
+python-dotenv
+pandas
+google-cloud-storage
+Flask
+apache-airflow
