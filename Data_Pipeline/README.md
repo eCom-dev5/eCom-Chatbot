@@ -137,8 +137,27 @@ After setting up google SDK, update the google SDK path in docker-compose.yaml
 ```bash
 docker --version
 ```
+
+### 8. Set Up Email Notifications
+1. Locate the airflow.cfg File
+   Find the airflow.cfg file in your AIRFLOW_HOME directory.
+2. Update the Following Fields
+   Open the airflow.cfg file and update the email configuration settings as shown below:
+   ```bash
+   smtp_host = smtp.gmail.com
+   smtp_user = <your gmail ID>
+   smtp_password = <your Gmail authenticated app password>
+   smtp_port = 587
+   smtp_mail_from = <your gmail ID>
+   ```
+   - smtp_host: Set to smtp.gmail.com for Gmail SMTP.
+   - smtp_user: Your full Gmail email address (e.g., youremail@gmail.com).
+   - smtp_password: Your Gmail authenticated app password. Ensure you have enabled App Passwords in your Google account settings.
+   - smtp_port: Use 587 
+   - mtp_mail_from: Your Gmail email address (same as smtp_user).
+   
   
-### 8. Running Docker and Initializing Airflow
+### 9. Running Docker and Initializing Airflow
 Once Docker is installed, follow these steps to set up and start Airflow with Docker Compose.
 1. Start Docker Compose Services
    Run the following command to bring up all services defined in the `docker-compose.yml` file in detached mode (running in the background):
