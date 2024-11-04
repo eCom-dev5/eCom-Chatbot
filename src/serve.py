@@ -1,8 +1,8 @@
 import os
 import json
+import pickle
 import redis
 import uvicorn
-import asyncio
 import pandas as pd
 from typing import Any
 from sqlalchemy import text
@@ -46,7 +46,14 @@ credentials = {
 }
 
 app = FastAPI()
-redis_client = redis.StrictRedis(host='localhost', port=6379, db=0, decode_responses=True)
+
+redis_client = redis.StrictRedis(
+  host=os.getenv("REDIS_HOST"),
+  port=os.getenv("REDIS_PORT"),
+  password=os.getenv("REDIS_PASSWORD"),
+  decode_responses=True)
+
+# redis_client = redis.StrictRedis(host='localhost', port=6379, db=0, decode_responses=True)
 engine = db.connect_with_db(credentials)
 
 async def create_retriever(asin: str):
@@ -87,29 +94,40 @@ async def create_retriever(asin: str):
     return retriever, meta_df
 
 
-async def get_retriever_for_asin(asin: str):
-    print("1")
-    retriever = redis_client.get(f"retriever:{asin}")
-    meta_df = redis_client.get(f"meta_df:{asin}")
+# async def get_retriever_for_asin(asin: str):
+#     retriever = redis_client.get(f"retriever:{asin}")
+#     meta_df = redis_client.get(f"meta_df:{asin}")
 
+#     if retriever and not meta_df.empty:
+#         return retriever, meta_df  # Return cached retriever and metadata
     
-    if retriever and meta_df:
-        return retriever, meta_df  # Return cached retriever and metadata
+#     # Create new retriever if not cached
+#     retriever, meta_df = await create_retriever(asin)
+#     if retriever and not meta_df.empty:
+#         redis_client.set(f"retriever:{asin}", retriever)
+#         redis_client.set(f"meta_df:{asin}", meta_df)
+#     return retriever, meta_df
+
+
+async def get_retriever_for_asin(asin: str):
+    retriever_pickle = redis_client.get(f'retriever_key:{asin}')
+    meta_df_pickle = redis_client.get(f'meta_df:{asin}')
     
-    # Create new retriever if not cached
-    retriever, meta_df = await create_retriever(asin)
-    if retriever and meta_df:
-        redis_client.set(f"retriever:{asin}", retriever)
-        redis_client.set(f"meta_df:{asin}", meta_df)
+    if retriever_pickle is None or meta_df_pickle is None:
+        # If data is missing, create and cache the retriever and metadata
+        retriever, meta_df = await create_retriever(asin)
+        if retriever is not None and not meta_df.empty:
+            retriever_pickle = pickle.dumps(retriever)
+            meta_df_pickle = pickle.dumps(meta_df)
+            redis_client.set(f'retriever_key:{asin}', retriever_pickle)
+            redis_client.set(f'meta_df:{asin}', meta_df_pickle)
+    else:
+        retriever = pickle.loads(retriever_pickle)
+        meta_df = pickle.loads(meta_df_pickle)
+
     return retriever, meta_df
 
-#old app get request
-# @app.get("/initialize")
-# async def initialize(asin: str):
-#     retriever, meta_df = await get_retriever_for_asin(asin)
-#     if retriever is None:
-#         return JSONResponse(content={"status": "failed to initialize retriever"}, status_code=500)
-#     return JSONResponse(content={"status": "retriever initialized", "asin": asin}, status_code=200)
+
 
 @app.get("/initialize")
 async def initialize(asin: str):
