@@ -1,0 +1,20 @@
+[2024-11-01T19:47:53.730+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-01T19:47:53.737+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.add_meta_data manual__2024-11-01T19:47:42.290371+00:00 [queued]>
+[2024-11-01T19:47:53.743+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.add_meta_data manual__2024-11-01T19:47:42.290371+00:00 [queued]>
+[2024-11-01T19:47:53.743+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-11-01T19:47:53.750+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): add_meta_data> on 2024-11-01 19:47:42.290371+00:00
+[2024-11-01T19:47:53.753+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=79) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-01T19:47:53.755+0000] {standard_task_runner.py:72} INFO - Started process 84 to run task
+[2024-11-01T19:47:53.755+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'add_meta_data', 'manual__2024-11-01T19:47:42.290371+00:00', '--job-id', '235', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmprxqnval8']
+[2024-11-01T19:47:53.756+0000] {standard_task_runner.py:105} INFO - Job 235: Subtask add_meta_data
+[2024-11-01T19:47:53.773+0000] {task_command.py:467} INFO - Running <TaskInstance: data_pipeline.add_meta_data manual__2024-11-01T19:47:42.290371+00:00 [running]> on host eb7019e3fc71
+[2024-11-01T19:47:53.802+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='your_name' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='add_meta_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-01T19:47:42.290371+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-01T19:47:42.290371+00:00'
+[2024-11-01T19:47:53.803+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-01T19:48:06.811+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-01T19:48:06.833+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-01T19:48:06.834+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=add_meta_data, run_id=manual__2024-11-01T19:47:42.290371+00:00, execution_date=20241101T194742, start_date=20241101T194753, end_date=20241101T194806
+[2024-11-01T19:48:06.889+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-01T19:48:06.901+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-01T19:48:06.902+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

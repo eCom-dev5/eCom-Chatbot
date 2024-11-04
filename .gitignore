@@ -1,4 +1,6 @@
 .env
+verta
+**/__pycache__
 .venv
 verta
 artifacts

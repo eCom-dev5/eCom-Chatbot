@@ -1,0 +1,90 @@
+[2024-10-30T18:26:24.502+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-30T18:26:24.507+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.transfer_task_db_user_data manual__2024-10-30T18:25:50.603163+00:00 [queued]>
+[2024-10-30T18:26:24.510+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.transfer_task_db_user_data manual__2024-10-30T18:25:50.603163+00:00 [queued]>
+[2024-10-30T18:26:24.510+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2024-10-30T18:26:24.514+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): transfer_task_db_user_data> on 2024-10-30 18:25:50.603163+00:00
+[2024-10-30T18:26:24.516+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=97) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-30T18:26:24.517+0000] {standard_task_runner.py:72} INFO - Started process 100 to run task
+[2024-10-30T18:26:24.517+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'transfer_task_db_user_data', 'manual__2024-10-30T18:25:50.603163+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpbi4ejf7w']
+[2024-10-30T18:26:24.518+0000] {standard_task_runner.py:105} INFO - Job 65: Subtask transfer_task_db_user_data
+[2024-10-30T18:26:24.535+0000] {task_command.py:467} INFO - Running <TaskInstance: data_pipeline.transfer_task_db_user_data manual__2024-10-30T18:25:50.603163+00:00 [running]> on host 6bca134bba56
+[2024-10-30T18:26:24.559+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='your_name' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='transfer_task_db_user_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-30T18:25:50.603163+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-30T18:25:50.603163+00:00'
+[2024-10-30T18:26:24.560+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-30T18:26:24.565+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-10-30T18:26:24.565+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'gcloud auth activate-service-account --key-file="./dockdecoder-03cb7054df7e.json" && gcloud sql import csv postgres gs://Data/Raw_CSV/TEST/TEST.csv --database=postgres --table=user_reviews_test']
+[2024-10-30T18:26:24.569+0000] {subprocess.py:86} INFO - Output:
+[2024-10-30T18:26:24.570+0000] {subprocess.py:93} INFO - /usr/bin/bash: line 1: gcloud: command not found
+[2024-10-30T18:26:24.570+0000] {subprocess.py:97} INFO - Command exited with return code 127
+[2024-10-30T18:26:24.574+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2024-10-30T18:26:24.575+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=data_pipeline, task_id=transfer_task_db_user_data, run_id=manual__2024-10-30T18:25:50.603163+00:00, execution_date=20241030T182550, start_date=20241030T182624, end_date=20241030T182624
+[2024-10-30T18:26:24.579+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-30T18:26:24.579+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 65 for task transfer_task_db_user_data (Bash command failed. The command returned a non-zero exit code 127.; 100)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2024-10-30T18:26:24.619+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-10-30T18:26:24.626+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-30T18:26:24.626+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

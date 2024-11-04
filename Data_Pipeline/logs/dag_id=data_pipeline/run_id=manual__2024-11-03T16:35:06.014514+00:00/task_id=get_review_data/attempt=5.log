@@ -1,0 +1,219 @@
+[2024-11-03T16:35:59.718+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-03T16:35:59.725+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_pipeline.get_review_data manual__2024-11-03T16:35:06.014514+00:00 [queued]>
+[2024-11-03T16:35:59.727+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_pipeline.get_review_data manual__2024-11-03T16:35:06.014514+00:00 [queued]>
+[2024-11-03T16:35:59.727+0000] {taskinstance.py:2865} INFO - Starting attempt 5 of 6
+[2024-11-03T16:35:59.731+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): get_review_data> on 2024-11-03 16:35:06.014514+00:00
+[2024-11-03T16:35:59.734+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=116) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-03T16:35:59.738+0000] {standard_task_runner.py:72} INFO - Started process 118 to run task
+[2024-11-03T16:35:59.737+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'data_pipeline', 'get_review_data', 'manual__2024-11-03T16:35:06.014514+00:00', '--job-id', '153', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmp83jwx11l']
+[2024-11-03T16:35:59.738+0000] {standard_task_runner.py:105} INFO - Job 153: Subtask get_review_data
+[2024-11-03T16:35:59.754+0000] {task_command.py:467} INFO - Running <TaskInstance: data_pipeline.get_review_data manual__2024-11-03T16:35:06.014514+00:00 [running]> on host 5acfa859d16b
+[2024-11-03T16:35:59.779+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='your_name' AIRFLOW_CTX_DAG_ID='data_pipeline' AIRFLOW_CTX_TASK_ID='get_review_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-03T16:35:06.014514+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-03T16:35:06.014514+00:00'
+[2024-11-03T16:35:59.780+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-03T16:36:01.373+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+urllib3.exceptions.SSLError: EOF occurred in violation of protocol (_ssl.c:2406)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /upload/storage/v1/b/mlops_data_pipeline/o?uploadType=resumable&upload_id=AHmUCY1_W_WFu9hKSvG7TFSWKn1kjwMzgC9fGZQ3e3pzAW6VX9W5ge6KtkZhYGpt8M2ONArK8u6247B9wOoSxjrNBcXP0o9YietEwV4Vonyj-e8z (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2406)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/src/download_data.py", line 59, in ingest_data_review
+    upload_blob(temp_csv_file_path, destination_blob_name)
+  File "/opt/airflow/dags/src/bucket_connection.py", line 18, in upload_blob
+    blob.upload_from_filename(source_file_name)
+  File "/usr/local/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 3003, in upload_from_filename
+    self._handle_filename_and_upload(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2881, in _handle_filename_and_upload
+    self._prep_and_do_upload(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2697, in _prep_and_do_upload
+    created_json = self._do_upload(
+                   ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2520, in _do_upload
+    response = self._do_resumable_upload(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2356, in _do_resumable_upload
+    response = upload.transmit_next_chunk(transport, timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/upload.py", line 515, in transmit_next_chunk
+    return _request_helpers.wait_and_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/_request_helpers.py", line 178, in wait_and_retry
+    raise error
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/_request_helpers.py", line 155, in wait_and_retry
+    response = func()
+               ^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/upload.py", line 507, in retriable_request
+    result = transport.request(
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/auth/transport/requests.py", line 538, in request
+    response = super(AuthorizedSession, self).request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /upload/storage/v1/b/mlops_data_pipeline/o?uploadType=resumable&upload_id=AHmUCY1_W_WFu9hKSvG7TFSWKn1kjwMzgC9fGZQ3e3pzAW6VX9W5ge6KtkZhYGpt8M2ONArK8u6247B9wOoSxjrNBcXP0o9YietEwV4Vonyj-e8z (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2406)')))
+[2024-11-03T16:36:01.384+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=data_pipeline, task_id=get_review_data, run_id=manual__2024-11-03T16:35:06.014514+00:00, execution_date=20241103T163506, start_date=20241103T163559, end_date=20241103T163601
+[2024-11-03T16:36:01.396+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-03T16:36:01.396+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 153 for task get_review_data (HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /upload/storage/v1/b/mlops_data_pipeline/o?uploadType=resumable&upload_id=AHmUCY1_W_WFu9hKSvG7TFSWKn1kjwMzgC9fGZQ3e3pzAW6VX9W5ge6KtkZhYGpt8M2ONArK8u6247B9wOoSxjrNBcXP0o9YietEwV4Vonyj-e8z (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2406)'))); 118)
+urllib3.exceptions.SSLError: EOF occurred in violation of protocol (_ssl.c:2406)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /upload/storage/v1/b/mlops_data_pipeline/o?uploadType=resumable&upload_id=AHmUCY1_W_WFu9hKSvG7TFSWKn1kjwMzgC9fGZQ3e3pzAW6VX9W5ge6KtkZhYGpt8M2ONArK8u6247B9wOoSxjrNBcXP0o9YietEwV4Vonyj-e8z (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2406)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/src/download_data.py", line 59, in ingest_data_review
+    upload_blob(temp_csv_file_path, destination_blob_name)
+  File "/opt/airflow/dags/src/bucket_connection.py", line 18, in upload_blob
+    blob.upload_from_filename(source_file_name)
+  File "/usr/local/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 3003, in upload_from_filename
+    self._handle_filename_and_upload(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2881, in _handle_filename_and_upload
+    self._prep_and_do_upload(
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2697, in _prep_and_do_upload
+    created_json = self._do_upload(
+                   ^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2520, in _do_upload
+    response = self._do_resumable_upload(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/cloud/storage/blob.py", line 2356, in _do_resumable_upload
+    response = upload.transmit_next_chunk(transport, timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/upload.py", line 515, in transmit_next_chunk
+    return _request_helpers.wait_and_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/_request_helpers.py", line 178, in wait_and_retry
+    raise error
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/_request_helpers.py", line 155, in wait_and_retry
+    response = func()
+               ^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/resumable_media/requests/upload.py", line 507, in retriable_request
+    result = transport.request(
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/google/auth/transport/requests.py", line 538, in request
+    response = super(AuthorizedSession, self).request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='storage.googleapis.com', port=443): Max retries exceeded with url: /upload/storage/v1/b/mlops_data_pipeline/o?uploadType=resumable&upload_id=AHmUCY1_W_WFu9hKSvG7TFSWKn1kjwMzgC9fGZQ3e3pzAW6VX9W5ge6KtkZhYGpt8M2ONArK8u6247B9wOoSxjrNBcXP0o9YietEwV4Vonyj-e8z (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2406)')))
+[2024-11-03T16:36:01.442+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-11-03T16:36:01.456+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-03T16:36:01.457+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
