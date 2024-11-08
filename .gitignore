@@ -1,6 +1,7 @@
 .env
 .venv
 verta
+cache
 artifacts
 big_credentials.json
 ecom

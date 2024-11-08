@@ -1,9 +1,12 @@
+import pandas as pd
 from langchain_groq import ChatGroq
 from langchain.schema import Document
 from constants import MEMBERS, OPTIONS
 from langchain_openai import ChatOpenAI
+from langchain_community.vectorstores import FAISS
 from utils.state import MultiAgentState, RouteQuery
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.output_parsers import StrOutputParser
 
 
@@ -58,6 +61,9 @@ def metadata_node(state: MultiAgentState):
 
     meta_df = state['meta_data']
 
+    if isinstance(meta_df, str):
+        meta_df = pd.read_csv(meta_df)
+    
     modified_details = meta_df['details'].astype(str).str.replace('{', '[')
     
     # Answer question
@@ -129,6 +135,12 @@ def retrieve(state: MultiAgentState):
     question = state["question"]
     retriever = state["retriever"]
 
+    # Load the database
+    if isinstance(retriever, str):
+        embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+        vectordb = FAISS.load_local(retriever, embeddings, allow_dangerous_deserialization=True)
+        retriever = vectordb.as_retriever()
+       
     # Retrieval
     documents = retriever.invoke(question)
 
