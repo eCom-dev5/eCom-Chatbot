@@ -1,10 +1,10 @@
 import os
 import json
-import redis
+import shutil
 import uvicorn
-import asyncio
 import pandas as pd
 from typing import Any
+from pathlib import Path
 from sqlalchemy import text
 from pydantic import BaseModel
 from graph import create_graph
@@ -14,7 +14,7 @@ from langfuse.callback import CallbackHandler
 from langchain_community.vectorstores import FAISS
 from langgraph.graph.state import CompiledStateGraph
 from langchain_huggingface import HuggingFaceEmbeddings
-from fastapi import FastAPI, Request, HTTPException, status, Query  # Add the import for Query
+from fastapi import FastAPI, HTTPException, status, Query
 
 from fastapi.responses import StreamingResponse, JSONResponse
 from langchain_community.document_loaders import DataFrameLoader
@@ -26,6 +26,15 @@ logger = logging.getLogger(__name__)
 
 from dotenv import load_dotenv
 load_dotenv()
+
+# Define the directory paths
+cache_dir = Path("cache")
+faiss_dir = cache_dir / "faiss"
+meta_dir = cache_dir / "meta"
+
+# Create directories if they don't exist
+for directory in [cache_dir, faiss_dir, meta_dir]:
+    directory.mkdir(parents=True, exist_ok=True)
 
 ## load the API Keys
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
@@ -47,11 +56,25 @@ credentials = {
 }
 
 app = FastAPI()
-redis_client = redis.StrictRedis(host='localhost', port=6379, db=0, decode_responses=True)
+
+vector_store_cache = []
+
 engine = db.connect_with_db(credentials)
 
-async def create_retriever(asin: str):
-    # Otherwise, create a new retriever
+class UserInput(BaseModel):
+    user_input: str
+    config: dict
+    parent_asin: str
+    user_id: str
+    log_langfuse: bool
+    stream_tokens: bool
+
+class clearCache(BaseModel):
+    user_id: str
+    parent_asin: str
+
+
+async def load_product_data(asin: str):
     with engine.begin() as connection:
         try:
             # Fetch reviews
@@ -71,81 +94,56 @@ async def create_retriever(asin: str):
             """)
             meta_result = connection.execute(meta_query)
             meta_df = pd.DataFrame(meta_result.fetchall(), columns=meta_result.keys())
-
+            
         except Exception as e:
-            print("Error:", e)
-            return None, None
+            raise HTTPException(status_code=500, detail="Error loading data")
 
-    # Load and process reviews
+    return review_df, meta_df
+
+
+def create_vector_store(review_df):
+    # Create document loader
     loader = DataFrameLoader(review_df)
     review_docs = loader.load()
 
-    # Initialize FAISS retriever
+    # Initialize embeddings and vector store
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     vectordb = FAISS.from_documents(documents=review_docs, embedding=embeddings)
-    retriever = vectordb.as_retriever()
-
-    return retriever, meta_df
-
-
-async def get_retriever_for_asin(asin: str):
-    print("1")
-    retriever = redis_client.get(f"retriever:{asin}")
-    meta_df = redis_client.get(f"meta_df:{asin}")
-
-    
-    if retriever and meta_df:
-        return retriever, meta_df  # Return cached retriever and metadata
-    
-    # Create new retriever if not cached
-    retriever, meta_df = await create_retriever(asin)
-    if retriever and meta_df:
-        redis_client.set(f"retriever:{asin}", retriever)
-        redis_client.set(f"meta_df:{asin}", meta_df)
-    return retriever, meta_df
-
-#old app get request
-# @app.get("/initialize")
-# async def initialize(asin: str):
-#     retriever, meta_df = await get_retriever_for_asin(asin)
-#     if retriever is None:
-#         return JSONResponse(content={"status": "failed to initialize retriever"}, status_code=500)
-#     return JSONResponse(content={"status": "retriever initialized", "asin": asin}, status_code=200)
-
-# @app.get("/initialize")
-# async def initialize(asin: str):
-#     logger.info(f"Received request to initialize retriever for ASIN: {asin}")
-
-#     # Uncomment and add your retriever initialization logic if needed
-#     # retriever, meta_df = await get_retriever_for_asin(asin)
-#     # if retriever is None:
-#     #     logger.error(f"Failed to initialize retriever for ASIN: {asin}")
-#     #     return JSONResponse(content={"status": "failed to initialize retriever"}, status_code=500)
-
-#     logger.info(f"Retriever initialized successfully for ASIN: {asin}")
-#     return JSONResponse(content={"status": "retriever initialized", "asin": asin}, status_code=200)
+    return vectordb
 
 
 @app.get("/initialize")
 async def initialize(asin: str = Query(...), user_id: int = Query(...)):
     logger.info(f"Received request to initialize retriever for ASIN: {asin} and User ID: {user_id}")
+    
+    cache_key = f"{user_id}-{asin}"
 
-    # Uncomment and add your retriever initialization logic if needed
-    # retriever, meta_df = await get_retriever_for_asin(asin)
-    # if retriever is None:
-    #     logger.error(f"Failed to initialize retriever for ASIN: {asin}")
-    #     return JSONResponse(content={"status": "failed to initialize retriever"}, status_code=500)
+    if cache_key not in vector_store_cache:
+        review_df, meta_df = await load_product_data(asin)
+        vector_db = create_vector_store(review_df)
+        vector_db.save_local(f"{faiss_dir}/{cache_key}")
+        meta_df.to_csv(f"{meta_dir}/{cache_key}.csv", index=False)
+        vector_store_cache.append(cache_key)
 
     logger.info(f"Retriever initialized successfully for ASIN: {asin} and User ID: {user_id}")
     return JSONResponse(content={"status": "retriever initialized", "asin": asin, "user_id": user_id}, status_code=200)
 
 
-class UserInput(BaseModel):
-    user_input: str
-    config: dict
-    parent_asin: str
-    log_langfuse: bool
-    stream_tokens: bool
+@app.post("/clear-cache")
+async def clear_retriever(request: clearCache):
+    user_id = request.user_id
+    asin = request.parent_asin
+    cache_key = f"{user_id}-{asin}"
+
+    if cache_key in vector_store_cache:
+        if os.path.exists(f"{faiss_dir}/{cache_key}") and os.path.isdir(f"{faiss_dir}/{cache_key}"):
+            shutil.rmtree(f"{faiss_dir}/{cache_key}")
+        if os.path.exists(f"{meta_dir}/{cache_key}.csv") and os.path.isfile(f"{meta_dir}/{cache_key}.csv"):
+            os.remove(f"{meta_dir}/{cache_key}.csv")
+        vector_store_cache.remove(cache_key)
+        return {"status": "cache cleared"}
+    else:
+        raise HTTPException(status_code=400, detail="Retriever not found")
 
 
 @app.post("/dev-invoke")
@@ -153,21 +151,32 @@ async def invoke(user_input: UserInput):
     """
     Invoke the agent with user input to retrieve a final response.
     """
-    retriever, meta_df = await get_retriever_for_asin(user_input.parent_asin)
-    if retriever is None:
+    cache_key = f"{user_input.user_id}-{user_input.parent_asin}"
+
+    if cache_key not in vector_store_cache:
+        review_df, meta_df = await load_product_data(user_input.parent_asin)
+        vector_db = create_vector_store(review_df)
+        vector_db.save_local(f"{faiss_dir}/{cache_key}")
+        meta_df.to_csv(f"{meta_dir}/{cache_key}.csv", index=False)
+        vector_store_cache.append(cache_key)
+
+    retriever = f"{faiss_dir}/{cache_key}"
+    meta_df = f"{meta_dir}/{cache_key}.csv"
+
+    if not os.path.exists(retriever):
         return JSONResponse(content={"status": "Retriever not initialized"}, status_code=400)
-    if meta_df is None:
+    if not os.path.exists(meta_df):
         return JSONResponse(content={"status": "Meta-Data not initialized"}, status_code=400)
     
     agent: CompiledStateGraph = create_graph()
     if user_input.log_langfuse:
         user_input.config.update({"callbacks": [langfuse_handler]})
     try:
-        response = await agent.ainvoke({
-                                        "question": user_input.user_input, 
-                                        "meta_data": meta_df,
-                                        "retriever": retriever
-                                    }, config=user_input.config)
+        response = agent.invoke({
+                                "question": user_input.user_input, 
+                                "meta_data": meta_df,
+                                "retriever": retriever
+                            }, config=user_input.config)
 
         output = {
             'question': response['question'],
@@ -185,20 +194,28 @@ async def message_generator(user_input: UserInput, stream_tokens=True) -> AsyncG
 
     This is the workhorse method for the /stream endpoint.
     """
-    retriever, meta_df = await get_retriever_for_asin(user_input.parent_asin)
-    if retriever is None:
+    cache_key = f"{user_input.user_id}-{user_input.parent_asin}"
+
+    if cache_key not in vector_store_cache:
+        review_df, meta_df = await load_product_data(user_input.parent_asin)
+        vector_db = create_vector_store(review_df)
+        vector_db.save_local(f"{faiss_dir}/{cache_key}")
+        meta_df.to_csv(f"{meta_dir}/{cache_key}.csv", index=False)
+        vector_store_cache.append(cache_key)
+
+    retriever = f"{faiss_dir}/{cache_key}"
+    meta_df = f"{meta_dir}/{cache_key}.csv"
+
+    if not os.path.exists(retriever):
         yield JSONResponse(content={"status": "Retriever not initialized"}, status_code=400)
-    if meta_df is None:
+    if not os.path.exists(meta_df):
         yield JSONResponse(content={"status": "Meta-Data not initialized"}, status_code=400)
     
     agent: CompiledStateGraph = create_graph()
-
-
     if user_input.log_langfuse:
         user_input.config.update({"callbacks": [langfuse_handler]})
     if user_input.stream_tokens == 0:
         stream_tokens = False
-
 
     # Process streamed events from the graph and yield messages over the SSE stream.
     async for event in agent.astream_events({"question": user_input.user_input, 
