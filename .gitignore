@@ -1,5 +1,6 @@
 .env
 verta
+cache
 **/__pycache__
 .venv
 verta
