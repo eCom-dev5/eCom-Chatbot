@@ -1,4 +1,4 @@
-import pandas as pd
+from pandas import DataFrame
 from operator import add
 from constants import OPTIONS
 from pydantic import BaseModel
@@ -11,7 +11,7 @@ class MultiAgentState(TypedDict):
     question_type: str
     answer: str 
     documents: Annotated[list[str], add]
-    meta_data: pd.DataFrame
+    meta_data: DataFrame
     retriever: VectorStoreRetriever
     followup_questions: list[str]
 
