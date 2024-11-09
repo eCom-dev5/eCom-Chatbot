@@ -7,9 +7,9 @@ on:
 env:
   PROJECT_ID: 'ecom-chat-437005'
   GAR_NAME: 'verta-chat'
-  GAR_LOCATION: 'us-east1' 
+  GAR_LOCATION: "us-east1" 
   SERVICE: 'verta-service'
-  REGION: 'us-east1' 
+  REGION: "us-east1"
   
 jobs:
   deploy:
@@ -35,9 +35,8 @@ jobs:
   
       - name: 'Build and Push Container'
         run: |-
-          DOCKER_TAG="$${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.GAR_NAME }}/${{ env.SERVICE }}:${{ github.sha }}"
-          docker build --tag "${DOCKER_TAG}" -f Dockerfile .
-          docker push "${DOCKER_TAG}"
+          docker build -t "$${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.GAR_NAME }}/${{ env.SERVICE }}:${{ github.sha }}" -f Dockerfile .
+          docker push "$${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.GAR_NAME }}/${{ env.SERVICE }}:${{ github.sha }}"
           
       - name: 'Deploy to Cloud Run'
         uses: 'google-github-actions/deploy-cloudrun@33553064113a37d688aa6937bacbdc481580be17' # google-github-actions/deploy-cloudrun@v2
