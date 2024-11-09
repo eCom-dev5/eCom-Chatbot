@@ -1,11 +1,11 @@
 .env
 verta
+**.json
 cache
 **/__pycache__
 .venv
 verta
 cache
 artifacts
-big_credentials.json
 ecom
 **/__pycache__/

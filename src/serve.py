@@ -117,7 +117,6 @@ async def initialize(asin: str = Query(...), user_id: int = Query(...)):
     logger.info(f"Received request to initialize retriever for ASIN: {asin} and User ID: {user_id}")
     
     cache_key = f"{user_id}-{asin}"
-
     if cache_key not in vector_store_cache:
         review_df, meta_df = await load_product_data(asin)
         vector_db = create_vector_store(review_df)
@@ -172,7 +171,7 @@ async def invoke(user_input: UserInput):
     if user_input.log_langfuse:
         user_input.config.update({"callbacks": [langfuse_handler]})
     try:
-        response = agent.invoke({
+        response = await agent.ainvoke({
                                 "question": user_input.user_input, 
                                 "meta_data": meta_df,
                                 "retriever": retriever
