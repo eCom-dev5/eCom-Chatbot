@@ -2,8 +2,7 @@ name: 'Build and Deploy to Cloud Run'
 
 on:
   push:
-    branches:
-      - '"dev"'
+    branches: ["dev"]
 
 env:
   PROJECT_ID: 'ecom-chat-437005'
